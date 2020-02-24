@@ -23,24 +23,12 @@ import { LayoutModule } from 'app/layout/layout.module';
 
 const appRoutes: Routes = [
     {
-        path        : 'apps',
-        loadChildren: () => import('./main/apps/apps.module').then(m => m.AppsModule)
-    },
-    {
         path        : 'pages',
         loadChildren: () => import('./main/pages/pages.module').then(m => m.PagesModule)
     },
     {
-        path        : 'ui',
-        loadChildren: () => import('./main/ui/ui.module').then(m => m.UIModule)
-    },
-    {
-        path        : 'documentation',
-        loadChildren: () => import('./main/documentation/documentation.module').then(m => m.DocumentationModule)
-    },
-    {
         path      : '**',
-        redirectTo: 'apps/dashboards/analytics'
+        redirectTo: 'pages/cards'
     }
 ];
 
